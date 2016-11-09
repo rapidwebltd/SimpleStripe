@@ -4,12 +4,7 @@ require_once '../vendor/autoload.php';
 
 use \RapidWeb\SimpleStripe\Factories\SimpleStripeFactory;
 
-$publishableKey = 'pk_test_tmdmCoJxEaUKDhNYkOBnXXOO';
-$secretKey = 'sk_test_n4IUmv3VMmPPxDXSReIbergg';
-
-$currency = 'GBP'; // Great British Pounds
-
-$simpleStripe = SimpleStripeFactory::create($publishableKey, $secretKey, $currency);
+$simpleStripe = SimpleStripeFactory::create('PUBLISHABLE_KEY', 'SECRET_KEY', 'GBP'); // GBP = Great British Pounds
 
 if (isset($_POST['stripeToken'])) {
 
@@ -18,7 +13,7 @@ if (isset($_POST['stripeToken'])) {
     $charge = $simpleStripe->charge($amount, $_POST['stripeToken']);
 
     if ($charge->succeeded) {
-        echo "Success!";
+        echo "Success! <a href=\"Example.php\">Make another payment.</a>";
     } else {
         if ($charge->problemType=='Card') {
             echo $charge->problem;
