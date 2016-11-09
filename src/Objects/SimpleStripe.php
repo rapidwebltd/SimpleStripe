@@ -7,11 +7,11 @@ use \Stripe\Stripe;
 
 class SimpleStripe
 {
-    private $paymentFormDirectory = __DIR__.'/../Resources/PaymentForms/';
+    private $paymentFormDirectory = null;
 
     private $publishableKey = null;
     private $secretKey = null;
-    
+
     public $currency = null;
 
     public function __construct($publishableKey, $secretKey, $currency)
@@ -19,6 +19,8 @@ class SimpleStripe
         $this->publishableKey = $publishableKey;
         $this->secretKey = $secretKey;
         $this->currency = strtolower($currency);
+
+        $this->paymentFormDirectory = __DIR__.'/../Resources/PaymentForms/';
 
         Stripe::setApiKey($this->secretKey);
         Stripe::setAppInfo('SimpleStripe', '', 'https://github.com/rapidwebltd/SimpleStripe');
