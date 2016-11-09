@@ -1,0 +1,23 @@
+{
+    "name": "rapidwebltd/simplestripe",
+    "description": "SimpleStripe is a really easy way to integrate basic Stripe-powered payments.",
+    "license": "LGPL3",
+    "keywords": [
+        "Stripe",
+        "Stripe library",
+        "library",
+        "PHP library",
+        "PHP Stripe library",
+        "payment gateway",
+        "Stripe payments"
+      ],
+    "require": {
+        "php": ">=5.3",
+        "stripe/stripe-php": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "RapidWeb\\SimpleStripe\\": "./src/"
+        }
+    }
+}
