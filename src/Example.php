@@ -15,8 +15,9 @@ if (isset($_POST['stripeToken'])) {
 
     if ($charge->succeeded) {
         
-        // If charge succeeded, display success messsage
-        echo "Success! <a href=\"Example.php\">Make another payment.</a>";
+        // If charge succeeded, display success messsage, or perhaps redirect the user to a success page
+        echo "Success!";
+        exit;
 
     } elseif ($charge->problemType=='Card') {
 
@@ -26,10 +27,9 @@ if (isset($_POST['stripeToken'])) {
     } else {
 
         // Else, display a generic failure message
-        echo "Sorry, there was a problem processing your payment. <a href=\"Example.php\">Please try again.</a>";
+        echo "Sorry, there was a problem processing your payment.";
     }
-
-    die;
+  
 }
 
 // Display a simple payment form
