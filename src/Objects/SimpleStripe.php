@@ -31,6 +31,7 @@ class SimpleStripe
         $filename = basename($type).'.html';
         $html = file_get_contents($this->paymentFormDirectory.$filename);
         $html = str_replace('[[SIMPLESTRIPE_PUBLISHABLE_KEY]]', $this->publishableKey, $html);
+        $html = str_replace('[[CSRF_FIELD]]', function_exists("csrf_field") ? csrf_field() : '', $html);
         return $html;
     }
 
