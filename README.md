@@ -60,8 +60,11 @@ The form will post back to the same URL it is displayed upon.
 ### Charging the customer
 
 Charging customers is simple. The following code is an example 
-of how you can handle the payment form post back, attempt to charge 
-the customer and handle success or failure.
+of how you can:
+
+1. Handle the payment form post back
+2. Attempt to charge the customer
+3. Handle success or failure
 
 ```php
 // If payment form has been submitted
@@ -102,5 +105,5 @@ For a complete implementation of SimpleStripe, see `src/Example.php`.
 
 ## License
 
-This library is licensed under the Lesser General Public license 
+This library is licensed under the Lesser General Public License 
 version 3. 
