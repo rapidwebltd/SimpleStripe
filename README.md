@@ -14,7 +14,7 @@ Just add the package to your composer.json file as follows and run
 ```json
 {
   "require": {
-       "rapidwebltd/php-google-contacts-v3-api": "1.*"
+       "rapidwebltd/simplestripe": "1.*"
    }
 }
 ```
