@@ -57,7 +57,7 @@ This code will also include all the necessary JavaScript code to handle
 client-side communication with Stripe and display of validation errors. 
 The form will post back to the same URL it is displayed upon.
 
-### Charging the customer
+## Charging the customer
 
 Charging customers is simple. The following code is an example 
 of how you can:
