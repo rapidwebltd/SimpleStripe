@@ -1,6 +1,6 @@
 {
     "name": "rapidwebltd/simplestripe",
-    "description": "SimpleStripe is a really easy way to integrate basic Stripe-powered payments.",
+    "description": "SimpleStripe makes it easier than ever to integrate basic Stripe-powered payments into a site. With only a small amount of code you can have a payment form ready to start charging customers.",
     "license": "LGPL3",
     "keywords": [
         "Stripe",
